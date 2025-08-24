@@ -1,14 +1,18 @@
-import React from 'react';
-import './CSS/App.css';
+function Header() {
+  //uploadSheet = () => {}
+  //downloadSheet = () => {}
 
-class Header extends React.Component {
-  render() {
     return (
-      <div className="Header">
-        
+      <div className='Header'>
+          <h1 className="row"> Isole Fluttuanti - Scheda Personaggio</h1>
+          
+          <div className='row'>
+            <button /*onClick={this.downloadSheet}*/ >Salva</button>
+            <input type="file" id="myfile"/>
+            <button /*onClick={this.uploadSheet}*/ >Carica</button>
+          </div>
       </div>
     );
-  }
 }
 
 export default Header;
