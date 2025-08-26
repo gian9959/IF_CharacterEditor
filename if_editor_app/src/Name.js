@@ -7,12 +7,10 @@ function Name(props) {
   }
 
     return (
-      <div className="Statblock col" style={position}>
-          <h2 className='whiteTitle'>{props.stat}</h2>
-          <div className='row'>
-            <input className='statInput' type="number" />
-          </div>
-      </div>
+        <div className="Statblock col" style={position}>
+            <h2 className='whiteTitle'>NOME</h2>
+            <input className='textInput nameInput' type="text" />
+        </div>
     );
 }
 

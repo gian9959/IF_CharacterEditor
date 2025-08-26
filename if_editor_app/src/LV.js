@@ -8,8 +8,9 @@ function LV(props) {
 
     return (
       <div className="Statblock col" style={position}>
-          <h2 className='whiteTitle'>{props.stat}</h2>
+          <h2 className='whiteTitle just-right'>LV</h2>
           <div className='row'>
+            <input className='Skills' type="text" />
             <input className='statInput' type="number" />
           </div>
       </div>

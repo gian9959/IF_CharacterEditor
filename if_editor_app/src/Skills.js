@@ -1,8 +1,6 @@
 function Skills() {
     return (
-        <div className='Skills'>
-            <input type="text" />
-        </div>
+        <textarea className='Skills' type="text" />
     );
 }
 export default Skills;

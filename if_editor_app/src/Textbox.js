@@ -9,7 +9,7 @@ function Textbox(props) {
     return (
         <div className='Textbox col' style={position}>
             <h2 className="whiteTitle">{props.title}</h2>
-            <textarea className="textInput" type="text" >
+            <textarea className="textInput row" type="text" >
             </textarea>
         </div>
     );
