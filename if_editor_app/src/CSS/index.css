@@ -278,6 +278,15 @@ td {
     overflow-y: hidden;
 }
 
+.LvResultWindow {
+    background-color: white;
+    height: 2vw;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .CEditor1 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
@@ -484,8 +493,7 @@ td {
 .pi-counter {
     justify-content: center;
     margin-top: 2.5vh;
-    margin-left: 0.25vw;
-    margin-right: 0.25vw;
+    margin-left: 0.2vw;
     grid-column-start: 7;
     grid-column-end: 12;
     grid-row-start: 6;

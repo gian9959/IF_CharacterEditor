@@ -2,7 +2,20 @@ import Textbox from './Textbox';
 import Treecell from './Treecell';
 import PI from './PI';
 
-function CEditor3() {
+function CEditor3(props) {
+
+    const updateSpells = (statID, stat) => {
+      props.updateFunc(char => {
+        return {...char, incantesimi:{...char.incantesimi, [statID]: stat}}
+      });
+    }
+
+    const updateSpellTree = (indexes, value) => {
+      let tree = props.values['tree'].slice();
+      tree[indexes[0]][indexes[1]] = value;
+      updateSpells('tree', tree);
+    }
+
     return (
       <div className="CEditor3">
         <div className='row-spaced'>
@@ -26,29 +39,26 @@ function CEditor3() {
           </div>
           <div className='treeWrapper'>
             <div className='treeGrid'>
-              <Treecell row={[11,14]} col={[1,3]}/>
-              <Treecell row={[11,14]} col={[3,5]}/>
-              <Treecell row={[11,14]} col={[5,7]}/>
-              <Treecell row={[11,14]} col={[7,9]}/>
+              <Treecell row={[11,14]} col={[1,3]} indexes={[0,0]} value={props.values['tree'][0][0]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[3,5]} indexes={[0,1]} value={props.values['tree'][0][1]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[5,7]} indexes={[0,2]} value={props.values['tree'][0][2]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[7,9]} indexes={[0,3]} value={props.values['tree'][0][3]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[11,13]} indexes={[0,4]} value={props.values['tree'][0][4]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[13,15]} indexes={[0,5]} value={props.values['tree'][0][5]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[15,17]} indexes={[0,6]} value={props.values['tree'][0][6]} updateFunc={updateSpellTree}/>
+              <Treecell row={[11,14]} col={[17,19]} indexes={[0,7]} value={props.values['tree'][0][7]} updateFunc={updateSpellTree}/>
 
-              <Treecell row={[11,14]} col={[11,13]}/>
-              <Treecell row={[11,14]} col={[13,15]}/>
-              <Treecell row={[11,14]} col={[15,17]}/>
-              <Treecell row={[11,14]} col={[17,19]}/>
+              <Treecell row={[7,12]} col={[2,5]} indexes={[1,0]} value={props.values['tree'][1][0]} updateFunc={updateSpellTree}/>
+              <Treecell row={[7,12]} col={[5,8]} indexes={[1,1]} value={props.values['tree'][1][1]} updateFunc={updateSpellTree}/>
+              <Treecell row={[7,12]} col={[12,15]} indexes={[1,2]} value={props.values['tree'][1][2]} updateFunc={updateSpellTree}/>
+              <Treecell row={[7,12]} col={[15,18]} indexes={[1,3]} value={props.values['tree'][1][3]} updateFunc={updateSpellTree}/>
 
-              <Treecell row={[7,12]} col={[2,5]}/>
-              <Treecell row={[7,12]} col={[5,8]}/>
-              
-              <Treecell row={[7,12]} col={[12,15]}/>
-              <Treecell row={[7,12]} col={[15,18]}/>
+              <Treecell row={[5,8]} col={[3,7]} indexes={[2,0]} value={props.values['tree'][2][0]} updateFunc={updateSpellTree}/>
+              <Treecell row={[5,8]} col={[13,17]} indexes={[2,1]} value={props.values['tree'][2][1]} updateFunc={updateSpellTree}/>
 
-              <Treecell row={[5,8]} col={[3,7]}/>
+              <Treecell row={[1,7]} col={[7,13]} indexes={[3,0]} value={props.values['tree'][3][0]} updateFunc={updateSpellTree}/>
 
-              <Treecell row={[5,8]} col={[13,17]}/>
-
-              <Treecell row={[1,7]} col={[7,13]}/>
-
-              <PI/>
+              <PI value={props.values['PI']} updateFunc={updateSpells}/>
             </div>
           </div>
           <div className='col-end'>
@@ -108,7 +118,7 @@ function CEditor3() {
             <td className='justifyText'>Muta un tuo tratto casuale con uno casuale di un’altra stirpe. </td>
           </tr>
         </table>
-        <Textbox title='INCANTESIMI' row={[1,3]} col={[2,3]}/>
+        <Textbox title='INCANTESIMI' id='inc' row={[1,3]} col={[2,3]} value={props.values['inc']} updateFunc={updateSpells}/>
       </div>
     );
 }

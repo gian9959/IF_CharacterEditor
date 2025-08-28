@@ -6,10 +6,14 @@ function Textbox(props) {
     gridColumnEnd: props.col[1]
   }
 
+    const update = (value) => {
+      props.updateFunc(props.id, value);
+    }
+
     return (
         <div className='Textbox col' style={position}>
             <h2 className="whiteTitle">{props.title}</h2>
-            <textarea className="textInput row" type="text" >
+            <textarea className="textInput row" type="text" value={props.value} onChange={(e) => update(e.target.value)}>
             </textarea>
         </div>
     );
