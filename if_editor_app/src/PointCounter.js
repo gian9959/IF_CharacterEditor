@@ -8,7 +8,7 @@ function PointCounter(props) {
   
     return (
       <div className="PointCounter col" style={position}>
-        <h2 className="whiteTitle center v-font">PUNTI VIAGGIATORE</h2>
+        <h2 className="whiteTitle centerText v-font">PUNTI VIAGGIATORE</h2>
         <div className="row counterInput">
             <input className="v-check" type="checkbox"/>
             <input className="v-check" type="checkbox"/>

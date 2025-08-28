@@ -4,22 +4,23 @@ function Counter(props) {
     gridRowEnd: props.row+1,
     gridColumnStart: props.col,
     gridColumnEnd: props.col+1,
-    marginTop: props.custom_top_marg
+    marginTop: props.custom_top_marg,
+    marginBottom: props.custom_bot_marg
   }
 
   var fontStyle = {
-    fontSize: '3vw'
+    fontSize: '2.5vw'
   }
 
   if (props.max) {
     fontStyle = {
-      fontSize: '1.25vw'
+      fontSize: '1vw'
     }
   }
   
     return (
       <div className="Counter col" style={position}>
-        <h2 className="whiteTitle center">{props.stat}</h2>
+        <h2 className="whiteTitle centerText">{props.stat}</h2>
         <div className="row">
             <input className="counterInput" type="number" style={fontStyle}/>
             { props.max &&

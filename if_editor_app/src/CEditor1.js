@@ -5,9 +5,9 @@ import Textbox from './Textbox';
 import Name from './Name';
 import LV from './LV';
 
-function CEditor() {
+function CEditor1() {
     return (
-      <div className="CEditor">
+      <div className="CEditor1">
         <Name row={1} col={1}/>
         <LV row={1} col={3}/>
 
@@ -23,9 +23,7 @@ function CEditor() {
         <Statblock stat='COMUNICAZIONE (COM)' row={5} col={1}/>
         <Statblock stat='PERCEZIONE (PER)' row={5} col={3}/>
 
-        <div className='counterBackground'>
-          .
-        </div>
+        <div className='counterBackground'></div>
 
         <Counter max={true} stat='PV' row={6} col={1}/>
         <Counter max={true} stat='PM' row={6} col={2}/>
@@ -42,4 +40,4 @@ function CEditor() {
     );
 }
 
-export default CEditor;
+export default CEditor1;

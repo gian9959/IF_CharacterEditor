@@ -1,15 +1,17 @@
+import DiceRoller from './DiceRoller.js'
+
 function Sidebar() {
     return (
       <div className="Sidebar">
-        <div className="logo-background">
-          <img id='Logo' src={require('./Imgs/IF_Logo.png')} alt="logo"/>
-        </div>
-        <button className='saveButtons'>Salva</button>
-        <button className='saveButtons'>Carica</button>
-        <table>
+        <img id='Logo' src={require('./Imgs/IF_Logo.png')} alt="logo"/>
+        <button className='customButton saveButtons'>Salva</button>
+        <button className='customButton saveButtons'>Carica</button>
+
+        
+        <table className='difficultTable'>
           <tr>
-            <th className='whiteTitle'>DIFFICOLTÀ</th>
-            <th className='whiteTitle'>CD</th>
+            <th className='whiteTitle tableHeader'>DIFFICOLTÀ</th>
+            <th className='whiteTitle tableHeader'>CD</th>
           </tr>
           <tr>
             <th className='whiteTitle tableEntry'>Nella media</th>
@@ -32,6 +34,7 @@ function Sidebar() {
             <td>24-27</td>
           </tr>
         </table>
+        <DiceRoller />
       </div>
     );
 }
