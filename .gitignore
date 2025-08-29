@@ -21,5 +21,3 @@ if_editor_app/.env.production.local
 if_editor_app/npm-debug.log*
 if_editor_app/yarn-debug.log*
 if_editor_app/yarn-error.log*
-
-*.html
