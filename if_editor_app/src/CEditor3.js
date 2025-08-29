@@ -1,5 +1,6 @@
 import Textbox from './Textbox';
 import Treecell from './Treecell';
+import Treeline from './Treeline';
 import PI from './PI';
 
 function CEditor3(props) {
@@ -59,6 +60,23 @@ function CEditor3(props) {
               <Treecell row={[1,7]} col={[7,13]} indexes={[3,0]} value={props.values['albero'][3][0]} updateFunc={updateSpellTree}/>
 
               <PI value={props.values['PI']} updateFunc={updateSpells}/>
+
+              <Treeline row={[12,10]} col={[2,3]} invert={false}/>
+              <Treeline row={[12,10]} col={[3,4]} invert={true}/>
+              <Treeline row={[12,10]} col={[6,7]} invert={false}/>
+              <Treeline row={[12,10]} col={[7,8]} invert={true}/>
+              <Treeline row={[12,10]} col={[12,13]} invert={false}/>
+              <Treeline row={[12,10]} col={[13,14]} invert={true}/>
+              <Treeline row={[12,10]} col={[16,17]} invert={false}/>
+              <Treeline row={[12,10]} col={[17,18]} invert={true}/>
+
+              <Treeline row={[7,9]} col={[4,5]} invert={false}/>
+              <Treeline row={[7,9]} col={[5,6]} invert={true}/>
+              <Treeline row={[7,9]} col={[14,15]} invert={false}/>
+              <Treeline row={[7,9]} col={[15,16]} invert={true}/>
+
+              <Treeline row={[4,6]} col={[6,8]} invert={false}/>
+              <Treeline row={[4,6]} col={[12,14]} invert={true}/>
             </div>
           </div>
           <div className='col-end'>
