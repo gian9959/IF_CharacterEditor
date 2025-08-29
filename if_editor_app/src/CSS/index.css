@@ -4,6 +4,7 @@
   min-height: 0;
   max-height: 100%;
   z-index: 1;
+  font-family: "Fraunces", serif;
 }
 
 input[type=number]::-webkit-outer-spin-button,
