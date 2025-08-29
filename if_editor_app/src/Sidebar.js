@@ -1,12 +1,34 @@
 import DiceRoller from './DiceRoller.js'
 
-function Sidebar() {
+function Sidebar(props) {
+
+    const save = () => {
+      props.saveFunc();
+    }
+
+    const load = () => {
+      var upfile = document.getElementById('fileInput').files[0];
+
+      if(upfile != null){
+        var reader = new FileReader();
+        reader.readAsText(upfile, 'UTF-8');
+        reader.onload = function (e) {
+          var frd = JSON.parse(e.target.result);
+          props.loadFunc(frd);
+        }
+      }
+    }
+
+    const fakeClick = () => {
+      document.getElementById('fileInput').click();
+    }
+
     return (
       <div className="Sidebar">
         <img id='Logo' src={require('./Imgs/IF_Logo.png')} alt="logo"/>
-        <button className='customButton saveButtons'>Salva</button>
-        <button className='customButton saveButtons'>Carica</button>
-
+        <button className='customButton saveButtons' onClick={() => save()}>Salva</button>
+        <button className='customButton saveButtons' onClick={() => fakeClick()}>Carica</button>
+        <input id='fileInput' className='hidden' type='file' onChange={() => load()}/>
         
         <table className='difficultTable'>
           <tr>

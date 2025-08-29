@@ -252,6 +252,10 @@ td {
     cursor: default;
 }
 
+.hidden {
+    display: none;
+}
+
 .DiceRoller {
     display: flex;
     flex-direction: column;

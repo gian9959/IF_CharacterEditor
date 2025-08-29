@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter, Routes, Route} from 'react-router-dom';
+import { saveAs } from 'file-saver';
 import './CSS/index.css'
 
 import CEditor1 from './CEditor1';
@@ -57,22 +58,36 @@ function App(){
     },
 
     incantesimi: {
-      tree: [[false,false,false,false,false,false,false,false],
-             [false,false,false,false],
-             [false,false],
-             [false]],
+      albero: [[false,false,false,false,false,false,false,false],
+               [false,false,false,false],
+               [false,false],
+               [false]],
 
       inc: '',
       PI: 0
-    }
+    },
+
+    version: 'v1.0'
     
   });
 
+  const saveFunc = () => {
+    var filename = 'personaggio.json';
+    if(character.statistiche['nome'] !== '')
+      filename = character.statistiche['nome']+'.json';
+
+    var jdwfile = JSON.stringify(character);
+    var blob = new Blob([jdwfile], {
+        type: "text/json;charset=utf-8;",
+    });
+    saveAs(blob, filename);
+  }
+
   return(
   <div className='main-row'>
-    <Sidebar />
+    <Sidebar saveFunc={saveFunc} loadFunc={setChar}/>
     <div className='col'>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <div className='wrapper'>
           <Routes>
@@ -81,7 +96,7 @@ function App(){
             <Route path='/page3' element={<CEditor3 values={character['incantesimi']} updateFunc={setChar}/>}/>
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   </div>
   )
