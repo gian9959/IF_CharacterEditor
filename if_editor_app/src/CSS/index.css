@@ -50,6 +50,70 @@ p {
     font-size: 0.8vw;
 }
 
+.mdInput h1 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 1.8vw;
+}
+
+.mdInput h2 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0.1vh;
+    font-size: 1.6vw;
+}
+
+.mdInput h3 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 1.4vw;
+}
+
+.mdInput h4 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 1.2vw;
+}
+
+.mdInput h5 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 1vw;
+}
+
+.mdInput h6 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 0.8vw;
+}
+
+.mdInput p {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 0.8vw;
+}
+
+.mdInput p {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 0.8vw;
+}
+
+.mdInput ol, ul {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1vh;
+    font-size: 0.8vw;
+}
+
 textarea {
   resize: none;
 }
@@ -232,6 +296,16 @@ line {
     font-size: 1vw;
 }
 
+.mdButtons {
+    border-radius: 5px;
+    height: 1.5vw;
+    margin-left: auto;
+    margin-right: 0.5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1vw;
+}
+
 .navButtons {
     background-color: black;
     color: white;
@@ -254,8 +328,6 @@ line {
     color: black;
     border: 3px solid black;
     border-bottom: none;
-    font-size: 1.25vw;
-    cursor: default;
 }
 
 .hidden {
@@ -473,6 +545,15 @@ line {
     margin: 0.25vw;
     text-align: start;
     height: 100%;
+}
+
+.mdInput {
+    margin: 0.5vw;
+    padding: 0.5vw;
+    text-align: start;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
 }
 
 .nameInput {
