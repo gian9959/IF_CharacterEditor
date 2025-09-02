@@ -1,10 +1,10 @@
 function Statblock(props) {
-  const position = {
-    gridRowStart: props.row,
-    gridRowEnd: props.row,
-    gridColumnStart: props.col,
-    gridColumnEnd: props.col+2
-  }
+    const position = {
+      gridRowStart: props.row,
+      gridRowEnd: props.row,
+      gridColumnStart: props.col,
+      gridColumnEnd: props.col+2
+    }
 
     const update = (id, value) => {
       props.updateFunc(id, value);

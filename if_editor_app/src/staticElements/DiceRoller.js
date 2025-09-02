@@ -20,21 +20,21 @@ function DiceRoller(props) {
           </div>
 
           <div className='row marg-bot center'>
-            <img className='diceLogo' src={require('./Imgs/d4.png')} alt="d4"/>
+            <img className='diceLogo' src={require('../Imgs/d4.png')} alt="d4"/>
             <button className='customButton diceButton' onClick={() => roll(4)}>&#160;d4&#160;</button>
-            <img className='diceLogo' src={require('./Imgs/d4.png')} alt="d4"/>
+            <img className='diceLogo' src={require('../Imgs/d4.png')} alt="d4"/>
           </div>
 
           <div className='row marg-bot center'>
-            <img className='diceLogo' src={require('./Imgs/d6.png')} alt="d6"/>
+            <img className='diceLogo' src={require('../Imgs/d6.png')} alt="d6"/>
             <button className='customButton diceButton' onClick={() => roll(6)}>&#160;d6&#160;</button>
-            <img className='diceLogo' src={require('./Imgs/d6.png')} alt="d6"/>
+            <img className='diceLogo' src={require('../Imgs/d6.png')} alt="d6"/>
           </div>
 
           <div className='row marg-bot center'>
-            <img className='diceLogo' src={require('./Imgs/d8.png')} alt="d8"/>
+            <img className='diceLogo' src={require('../Imgs/d8.png')} alt="d8"/>
             <button className='customButton diceButton' onClick={() => roll(8)}>&#160;d8&#160;</button>
-            <img className='diceLogo' src={require('./Imgs/d8.png')} alt="d8"/>
+            <img className='diceLogo' src={require('../Imgs/d8.png')} alt="d8"/>
           </div>
 
           <button className='customButton diceButton' onClick={() => setDice([])}>Cancella</button>

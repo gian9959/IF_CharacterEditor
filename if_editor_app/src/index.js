@@ -5,11 +5,11 @@ import { HashRouter, Routes, Route} from 'react-router-dom';
 import { saveAs } from 'file-saver';
 import './CSS/index.css'
 
-import CEditor1 from './CEditor1';
-import CEditor2 from './CEditor2';
-import CEditor3 from './CEditor3';
-import Sidebar from './Sidebar';
-import Navbar from './Navbar';
+import CEditor1 from './editors/CEditor1';
+import CEditor2 from './editors/CEditor2';
+import CEditor3 from './editors/CEditor3';
+import Sidebar from './staticElements/Sidebar';
+import Navbar from './staticElements/Navbar';
 
 function App(){
 

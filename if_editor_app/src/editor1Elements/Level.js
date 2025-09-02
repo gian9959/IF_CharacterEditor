@@ -1,6 +1,6 @@
 import Classrow from "./Classrow";
 
-function LV(props) {
+function Level(props) {
     const position = {
       gridRowStart: props.row,
       gridRowEnd: props.row,
@@ -40,4 +40,4 @@ function LV(props) {
     );
 }
 
-export default LV;
+export default Level;

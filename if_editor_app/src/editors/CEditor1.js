@@ -1,9 +1,9 @@
-import Statblock from './Statblock';
-import Counter from './Counter';
-import PointCounter from './PointCounter';
-import Textbox from './Textbox';
-import Name from './Name';
-import LV from './LV';
+import Statblock from '../editor1Elements/Statblock';
+import Counter from '../editor1Elements/Counter';
+import PointCounter from '../editor1Elements/PointCounter';
+import Textbox from '../otherElements/Textbox';
+import Name from '../editor1Elements/Name';
+import Level from '../editor1Elements/Level';
 
 function CEditor1(props) {
 
@@ -16,7 +16,7 @@ function CEditor1(props) {
     return (
       <div className="CEditor1">
         <Name row={1} col={1} updateFunc={updateStats} value={props.values['nome']}/>
-        <LV row={1} col={3} updateFunc={updateStats} value={props.values['lv']}/>
+        <Level row={1} col={3} updateFunc={updateStats} value={props.values['lv']}/>
 
         <Statblock stat='CORPO (COR)' id='cor' row={2} col={1} updateFunc={updateStats} values={[props.values['cor'], props.values['corA']]}/>
         <Statblock stat='MENTE (MEN)' id='men' row={2} col={3} updateFunc={updateStats} values={[props.values['men'], props.values['menA']]}/>

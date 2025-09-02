@@ -1,7 +1,7 @@
-import Textbox from './Textbox';
-import Treecell from './Treecell';
-import Treeline from './Treeline';
-import PI from './PI';
+import Textbox from '../otherElements/Textbox';
+import Treecell from '../editor3Elements/Treecell';
+import Treeline from '../editor3Elements/Treeline';
+import PI from '../editor3Elements/PI';
 
 function CEditor3(props) {
 

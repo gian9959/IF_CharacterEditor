@@ -25,7 +25,7 @@ function Sidebar(props) {
 
     return (
       <div className="Sidebar">
-        <img id='Logo' src={require('./Imgs/IF_Logo.png')} alt="logo"/>
+        <img id='Logo' src={require('../Imgs/IF_Logo.png')} alt="logo"/>
         <button className='customButton saveButtons' onClick={() => save()}>Salva</button>
         <button className='customButton saveButtons' onClick={() => fakeClick()}>Carica</button>
         <input id='fileInput' className='hidden' type='file' onChange={() => load()}/>

@@ -1,5 +1,5 @@
-import RidPM from './RidPM';
-import Textbox from './Textbox';
+import RidPM from '../editor2Elements/RidPM';
+import Textbox from '../otherElements/Textbox';
 
 function CEditor2(props) {
 
@@ -29,7 +29,7 @@ function CEditor2(props) {
 
         <div className='col skeletonCol'>
           <RidPM value={props.values['ridPM']} updateFunc={updateAnatomy}/>
-          <img id='skeleton' src={require('./Imgs/skeleton.png')} alt="skeleton"/>
+          <img id='skeleton' src={require('../Imgs/skeleton.png')} alt="skeleton"/>
         </div>
       </div>
     );
