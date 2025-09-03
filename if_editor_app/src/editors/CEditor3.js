@@ -136,7 +136,7 @@ function CEditor3(props) {
             <td className='justifyText'>Muta un tuo tratto casuale con uno casuale di un’altra stirpe. </td>
           </tr>
         </table>
-        <Textbox title='INCANTESIMI' id='inc' row={[1,3]} col={[2,3]} value={props.values['inc']} updateFunc={updateSpells}/>
+        <Textbox title='INCANTESIMI' id='inc' row={[1,3]} col={[2,3]} updateFunc={updateSpells} values={[props.values['inc'], props.values['md']]} index={0} />
       </div>
     );
 }

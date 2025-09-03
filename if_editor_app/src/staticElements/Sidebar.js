@@ -14,6 +14,16 @@ function Sidebar(props) {
         reader.readAsText(upfile, 'UTF-8');
         reader.onload = function (e) {
           var frd = JSON.parse(e.target.result);
+
+          // converting from older versions
+          if(frd['version'] < 'v1.1'){
+            frd = {...frd,
+                  statistiche:{...frd.statistiche, md: [false,false,false]},
+                  anatomia:{...frd.anatomia, md: [false,false,false,false,false,false,false,false,false,false]},
+                  incantesimi:{...frd.incantesimi, md: [false]}
+            }
+          }
+          frd['version'] = 'v1.1';
           props.loadFunc(frd);
         }
       }

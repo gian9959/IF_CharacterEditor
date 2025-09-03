@@ -42,7 +42,9 @@ function App(){
 
       talenti: '',
       inventario: '',
-      note: ''
+      note: '',
+
+      md: [false,false,false]
     },
 
     anatomia: {
@@ -54,7 +56,9 @@ function App(){
       bocca: '',
       busto: '',
 
-      ridPM: 0
+      ridPM: 0,
+
+      md: [false,false,false,false,false,false,false,false,false,false]
     },
 
     incantesimi: {
@@ -64,10 +68,12 @@ function App(){
                [false]],
 
       inc: '',
-      PI: 0
+      PI: 0,
+
+      md: [false]
     },
 
-    version: 'v1.0'
+    version: 'v1.1'
     
   });
 

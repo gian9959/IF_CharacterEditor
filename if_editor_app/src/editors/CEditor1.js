@@ -38,10 +38,10 @@ function CEditor1(props) {
 
         <PointCounter row={7} col={2} updateFunc={updateStats} value={props.values['viagg']}/>
 
-        <Textbox title='NOTE' id='note' row={[6,8]} col={[3,5]} updateFunc={updateStats} value={props.values['note']}/>
+        <Textbox title='NOTE' id='note' row={[6,8]} col={[3,5]} updateFunc={updateStats} values={[props.values['note'], props.values['md']]} index={0}/>
 
-        <Textbox title='TALENTI / TRATTI' id='talenti' row={[1,5]} col={[5,9]} updateFunc={updateStats} value={props.values['talenti']}/>
-        <Textbox title='INVENTARIO' id='inventario' row={[5,8]} col={[5,9]} updateFunc={updateStats} value={props.values['inventario']}/>
+        <Textbox title='TALENTI / TRATTI' id='talenti' row={[1,5]} col={[5,9]} updateFunc={updateStats} values={[props.values['talenti'], props.values['md']]} index={1}/>
+        <Textbox title='INVENTARIO' id='inventario' row={[5,8]} col={[5,9]} updateFunc={updateStats} values={[props.values['inventario'], props.values['md']]} index={2}/>
 
       </div>
     );
