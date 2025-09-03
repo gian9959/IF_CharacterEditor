@@ -25,6 +25,7 @@ function Textbox(props) {
     }
 
     marked.use({
+      gfm: true,
       breaks: true
     });
 

@@ -53,7 +53,7 @@ p {
 .mdInput h1 {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 1.8vw;
 }
 
@@ -61,56 +61,58 @@ p {
     padding-top: 0;
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 1.6vw;
 }
 
 .mdInput h3 {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 1.4vw;
 }
 
 .mdInput h4 {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 1.2vw;
 }
 
 .mdInput h5 {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 1vw;
 }
 
 .mdInput h6 {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.2vw;
     font-size: 0.8vw;
 }
 
 .mdInput p {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.4vw;
     font-size: 0.8vw;
 }
 
-.mdInput p {
+.mdInput ol{
+    display: inline-block;
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.4vw;
     font-size: 0.8vw;
 }
 
-.mdInput ol, ul {
+.mdInput ul{
+    display: inline-block;
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0.1vh;
+    margin-bottom: 0.4vw;
     font-size: 0.8vw;
 }
 
