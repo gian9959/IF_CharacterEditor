@@ -52,8 +52,6 @@ function App(){
       braccioSx: '', braccioDx: '',
       gambaSx: '', gambaDx: '',
       cranio: '',
-      orecchie: '',
-      bocca: '',
       busto: '',
 
       ridPM: 0,
@@ -73,7 +71,7 @@ function App(){
       md: [false]
     },
 
-    version: 'v1.1'
+    version: 'v1.2'
     
   });
 

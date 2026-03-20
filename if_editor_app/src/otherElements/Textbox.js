@@ -4,11 +4,11 @@ import DOMPurify from 'dompurify'
 
 function Textbox(props) {
     const position = {
-    gridRowStart: props.row[0],
-    gridRowEnd: props.row[1],
-    gridColumnStart: props.col[0],
-    gridColumnEnd: props.col[1]
-  }
+      gridRowStart: props.row[0],
+      gridRowEnd: props.row[1],
+      gridColumnStart: props.col[0],
+      gridColumnEnd: props.col[1]
+    }
 
     const update = (id, value) => {
       props.updateFunc(id, value);

@@ -23,7 +23,16 @@ function Sidebar(props) {
                   incantesimi:{...frd.incantesimi, md: [false]}
             }
           }
-          frd['version'] = 'v1.1';
+          if(frd['version'] < 'v1.2'){
+            let old = frd['anatomia']['orecchie'];
+            delete frd['anatomia']['orecchie']
+            frd['anatomia']['cranio'] = frd['anatomia']['cranio'] + '\n' + old;
+
+            old = frd['anatomia']['bocca'];
+            delete frd['anatomia']['bocca']
+            frd['anatomia']['cranio'] = frd['anatomia']['cranio'] + '\n' + old;
+          }
+          frd['version'] = 'v1.2';
           props.loadFunc(frd);
         }
       }
@@ -41,30 +50,32 @@ function Sidebar(props) {
         <input id='fileInput' className='hidden' type='file' onChange={() => load()}/>
         
         <table className='difficultTable'>
-          <tr>
-            <th className='whiteTitle tableHeader'>DIFFICOLTÀ</th>
-            <th className='whiteTitle tableHeader'>CD</th>
-          </tr>
-          <tr>
-            <th className='whiteTitle tableEntry'>Nella media</th>
-            <td>8-11</td>
-          </tr>
-          <tr>
-            <th className='whiteTitle tableEntry'>Impegnativa</th>
-            <td>12-15</td>
-          </tr>
-          <tr>
-            <th className='whiteTitle tableEntry'>Difficile</th>
-            <td>16-19</td>
-          </tr>
-          <tr>
-            <th className='whiteTitle tableEntry'>Molto difficile</th>
-            <td>20-23</td>
-          </tr>
-          <tr>
-            <th className='whiteTitle tableEntry'>Quasi impossibile</th>
-            <td>24-27</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th className='whiteTitle tableHeader'>DIFFICOLTÀ</th>
+              <th className='whiteTitle tableHeader'>CD</th>
+            </tr>
+            <tr>
+              <th className='whiteTitle tableEntry'>Nella media</th>
+              <td>10-11</td>
+            </tr>
+            <tr>
+              <th className='whiteTitle tableEntry'>Impegnativa</th>
+              <td>12-13</td>
+            </tr>
+            <tr>
+              <th className='whiteTitle tableEntry'>Difficile</th>
+              <td>14-15</td>
+            </tr>
+            <tr>
+              <th className='whiteTitle tableEntry'>Molto difficile</th>
+              <td>16-17</td>
+            </tr>
+            <tr>
+              <th className='whiteTitle tableEntry'>Quasi impossibile</th>
+              <td>18-19</td>
+            </tr>
+          </tbody>
         </table>
         <DiceRoller />
       </div>
